@@ -5,6 +5,13 @@ function showDefault() {
     pictureFrame.style.backgroundSize = 'cover';
     pictureFrame.style.backgroundPosition = 'center';
 
+    // Check if .visible class is already applied
+    setTimeout(function() {
+        // Check if .visible class is already applied
+        if (!pictureFrame.classList.contains('visible')) {
+            pictureFrame.classList.toggle('visible');
+        }
+    }, 500); // Delay in milliseconds (1000ms = 1s)
     // Toggle animation to show the picture
     pictureFrame.classList.toggle('visible');
 }
@@ -44,6 +51,13 @@ document.getElementById('myButton').addEventListener('click', function() {
                     pictureFrame.style.backgroundSize = 'cover';
                     pictureFrame.style.backgroundPosition = 'center';
                     
+                    // Check if .visible class is already applied
+                    setTimeout(function() {
+                        // Check if .visible class is already applied
+                        if (!pictureFrame.classList.contains('visible')) {
+                            pictureFrame.classList.toggle('visible');
+                        }
+                    }, 500); // Delay in milliseconds (1000ms = 1s)
                     // Toggle animation to show the picture
                     pictureFrame.classList.toggle('visible');
                 };
