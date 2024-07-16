@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center elements vertically */
+    justify-content: center;
     height: 100vh;
     background-color: #333;
     color: #f0f0f0;
@@ -22,7 +22,6 @@ h1 {
 .photo-button {
     width: 100px;
     height: 100px;
-
     position: relative;
 }
 
@@ -32,7 +31,7 @@ h1 {
     left: 12%;
     bottom: 12%;
     right: 12%;
-    border-radius: 50%; /* Border radius 50% for circle */
+    border-radius: 50%;
     background-color: #ffffff;
     opacity: 0;
     transition: opacity 0.25s;
@@ -44,7 +43,7 @@ h1 {
     left: 0;
     bottom: 0;
     right: 0;
-    border-radius: 50%; /* Border radius 50% for circle */
+    border-radius: 50%;
     border: 0.5em solid #ffffff;
     opacity: 0.8;
     transition: opacity 0.25s;
@@ -66,28 +65,27 @@ h1 {
     height: 40vh; /* 40% of the viewport height */
     max-width: 400px; /* Ensures the image does not overflow the container */
     object-fit: contain; /* Ensures the image maintains its aspect ratio */
-    z-index: 1; /* Ensure the camera is below other elements */
+    z-index: 1; /* Ensure the camera is above other elements */
 }
 
 
 .picture-frame {
-    height: auto; /* 40% of the viewport height */
+    height: auto;
     max-width: 200px; /* Ensures the image does not overflow the container */
     object-fit: contain; /* Ensures the image maintains its aspect ratio */
     border-top: 20px solid white;
     border-left: 15px solid white;
     border-right: 15px solid white;
     border-bottom: 60px solid white;
-    margin-bottom: 40px; /* Add margin to space out elements */
-    transition: none; /* Remove transition on visibility */
+    margin-bottom: 20px;
+    transition: none; /* Remove transition*/
     transform: translateY(-322px); /* Start hidden below */
-    opacity: 0;
-    z-index: 0; /* Ensure the camera is below other elements */
+    opacity: 0; /* Turn invisible */
+    z-index: 0; /* Ensure the frame is below other elements */
 }
 
 .picture-frame.visible {
-    transform: translateY(0px); /* Slide up into view */
+    transform: translateY(0px); /* Slide down into view */
     opacity: 1; /* Fade in */
-
     transition: transform 2.5s ease, opacity 4.5s ease-in-out; /* Smooth transition for transform */
 }
