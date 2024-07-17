@@ -1,5 +1,7 @@
 // Function to show default image in .picture-frame
 function showDefault() {
+    var cameraFlash = document.getElementById("cameraFlash"); 
+    cameraFlash.play();
     var pictureFrame = document.querySelector('.picture-frame');
     pictureFrame.style.backgroundImage = 'url(https://t4.ftcdn.net/jpg/04/80/12/93/360_F_480129384_xkBXyTdVt1R5F7KBwTD2kDURi7hV97Ad.jpg)';
     pictureFrame.style.backgroundSize = 'cover';
@@ -45,6 +47,8 @@ document.getElementById('myButton').addEventListener('click', function() {
                     // Convert canvas content to base64 data URL
                     var imageDataURL = canvas.toDataURL('image/png');
 
+                    var cameraFlash = document.getElementById("cameraFlash"); 
+                    cameraFlash.play();
                     // Display the captured image in place of .picture-frame
                     var pictureFrame = document.querySelector('.picture-frame');
                     pictureFrame.style.backgroundImage = 'url(' + imageDataURL + ')';
